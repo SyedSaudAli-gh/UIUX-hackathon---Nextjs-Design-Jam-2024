@@ -26,12 +26,12 @@ function Footer() {
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="hover:bg-slate-100 rounded-full ">
+              <Link href={"/about"} className="hover:bg-slate-100 rounded-full ">
                 About
               </Link>
             </li>
             <li>
-              <Link href={"/"} className="hover:bg-slate-100 rounded-full ">
+              <Link href={"/contact"} className="hover:bg-slate-100 rounded-full ">
                 Contact
               </Link>
             </li>

@@ -8,15 +8,6 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from "@/components/ui/pagination";
 
 function Contact() {
   return (
@@ -69,16 +60,19 @@ function Contact() {
         </div>
       </div>
       <div className="w-full h-auto">
-        <div className="flex flex-col justify-center items-center mt-20 poppins">
-          <h1 className="font-semibold text-[36px] ">Get In Touch With Us</h1>
-          <p className="w-[644px] h-[48px] mt-2 text-[#9F9F9F] text-center">
+        <div className="flex flex-col justify-center items-center mt-20 poppins px-4">
+          <h1 className="font-semibold text-[24px] sm:text-[36px] text-center">
+            Get In Touch With Us
+          </h1>
+          <p className="w-full max-w-[644px] mt-2 text-[#9F9F9F] text-center text-sm sm:text-base">
             For More Information About Our Product & Services. Please Feel Free
             To Drop Us An Email. Our Staff Always Be There To Help You Out. Do
             Not Hesitate!
           </p>
         </div>
-        <div className="w-[1058px] h-[923px] flex m-auto">
-          <div className="w-[393px] h-[537px] flex flex-col gap-12 justify-center poppins ">
+
+        <div className="w-full max-w-[1058px] flex flex-col justify-center items-center lg:flex-row m-auto px-4 mt-10 gap-8">
+          <div className="w-full max-w-[393px] flex flex-col gap-8 justify-center  poppins">
             <div>
               <div className="flex items-center gap-5">
                 <Image
@@ -87,12 +81,15 @@ function Contact() {
                   width={22}
                   height={28}
                 />
-                <span className="font-medium text-[24px]">Address</span>
+                <span className="font-medium text-[20px] sm:text-[24px]">
+                  Address
+                </span>
               </div>
-              <address className="w-[212px] h-[72px] ml-10 ">
+              <address className="ml-10 text-sm sm:text-base">
                 236 5th SE Avenue, New York NY10000, United States
               </address>
             </div>
+
             <div>
               <div className="flex items-center gap-5">
                 <Image
@@ -101,12 +98,15 @@ function Contact() {
                   width={22}
                   height={28}
                 />
-                <span className="font-medium text-[24px]">Phone</span>
+                <span className="font-medium text-[20px] sm:text-[24px]">
+                  Phone
+                </span>
               </div>
-              <p className="w-[212px] h-[72px] ml-10 ">
-                Mobile: +(84) 546-6789 Hotline: +(84) 456-6789
+              <p className="ml-10 text-sm sm:text-base">
+                Mobile: +(84) 546-6789 <br /> Hotline: +(84) 456-6789
               </p>
             </div>
+
             <div>
               <div className="flex items-center gap-5">
                 <Image
@@ -115,86 +115,93 @@ function Contact() {
                   width={22}
                   height={28}
                 />
-                <span className="font-medium text-[24px]">Working Time</span>
+                <span className="font-medium text-[20px] sm:text-[24px]">
+                  Working Time
+                </span>
               </div>
-              <p className="w-[212px] h-[72px] ml-10 ">
-                Monday-Friday: 9:00 - 22:00 Saturday-Sunday: 9:00 - 21:00
+              <p className="ml-10 text-sm sm:text-base">
+                Monday-Friday: 9:00 - 22:00 <br /> Saturday-Sunday: 9:00 - 21:00
               </p>
             </div>
           </div>
-          <div className="max-w-[635px] w-full mx-auto p-5">
-            <div className="max-w-[531px] w-full mx-auto mt-16 flex flex-col gap-10 poppins">
-              <label htmlFor="name" className="block font-medium ">
+
+          <div className="w-full max-w-[635px] mx-auto p-5">
+            <div className="w-full max-w-[531px] mx-auto flex flex-col gap-6 poppins">
+              <label htmlFor="name" className="block font-medium">
                 Your Name
                 <input
                   id="name"
                   type="text"
                   placeholder="ABC"
-                  className="w-full mt-2 p-3 border border-gray-300 rounded-md  "
-                />
-              </label>
-              <label htmlFor="name" className="block  font-medium ">
-                Email address
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Abc@def.com"
-                  className="w-full mt-2 p-3 border border-gray-300 rounded-md  "
-                />
-              </label>
-              <label htmlFor="name" className="block  font-medium ">
-                Subject
-                <input
-                  id="Subject"
-                  type="text"
-                  placeholder="This is an optional"
-                  className="w-full mt-2 p-3 border border-gray-300 rounded-md  "
+                  className="w-full mt-2 p-3 border border-gray-300 rounded-md"
                 />
               </label>
 
-              <label
-                htmlFor="message"
-                className="block text-gray-700 font-medium mb-2"
-              >
+              <label htmlFor="email" className="block font-medium">
+                Email Address
+                <input
+                  id="email"
+                  type="text"
+                  placeholder="Abc@def.com"
+                  className="w-full mt-2 p-3 border border-gray-300 rounded-md"
+                />
+              </label>
+
+              <label htmlFor="subject" className="block font-medium">
+                Subject
+                <input
+                  id="subject"
+                  type="text"
+                  placeholder="This is an optional"
+                  className="w-full mt-2 p-3 border border-gray-300 rounded-md"
+                />
+              </label>
+
+              <label htmlFor="message" className="block font-medium">
                 Message
                 <textarea
                   id="message"
                   rows={4}
-                  placeholder="Hi! i’d like to ask about"
-                  className="w-full mt-2 p-3 border border-gray-300 rounded-md  "
+                  placeholder="Hi! I’d like to ask about..."
+                  className="w-full mt-2 p-3 border border-gray-300 rounded-md"
                 />
               </label>
-              <button className="w-[237px] h-[48px] border-2 rounded-lg poppins">Submit</button>
+
+              <button className="w-full sm:w-[237px] h-[48px] border-2 rounded-lg mx-auto sm:mx-0">
+                Submit
+              </button>
             </div>
           </div>
-          
         </div>
-        <div className="mt-20 w-full h-auto bg-[#FAF4F4] flex flex-wrap justify-center gap-8 py-8 poppins">
-  {/* Free Delivery */}
-  <div className="w-full sm:w-[376px] h-auto text-center sm:text-left">
-    <h1 className="font-medium text-[24px] sm:text-[32px]">Free Delivery</h1>
-    <p className="text-[16px] sm:text-[20px] text-[#9F9F9F] mt-2">
-      For all orders over $50, consectetur adipiscing elit.
-    </p>
-  </div>
 
-  {/* 90 Days Return */}
-  <div className="w-full sm:w-[376px] h-auto text-center sm:text-left">
-    <h1 className="font-medium text-[24px] sm:text-[32px]">90 Days Return</h1>
-    <p className="text-[16px] sm:text-[20px] text-[#9F9F9F] mt-2">
-      If goods have problems, consectetur adipiscing elit.
-    </p>
-  </div>
+        <div className="mt-20 w-full h-auto bg-[#FAF4F4] flex flex-wrap justify-center gap-8 py-8 px-4 poppins">
+          <div className="w-full sm:w-[376px] text-center sm:text-left">
+            <h1 className="font-medium text-[20px] sm:text-[32px]">
+              Free Delivery
+            </h1>
+            <p className="text-sm sm:text-base text-[#9F9F9F] mt-2">
+              For all orders over $50, consectetur adipiscing elit.
+            </p>
+          </div>
 
-  {/* Secure Payment */}
-  <div className="w-full sm:w-[376px] h-auto text-center sm:text-left">
-    <h1 className="font-medium text-[24px] sm:text-[32px]">Secure Payment</h1>
-    <p className="text-[16px] sm:text-[20px] text-[#9F9F9F] mt-2">
-      100% secure payment, consectetur adipiscing elit.
-    </p>
-  </div>
-</div>
+          <div className="w-full sm:w-[376px] text-center sm:text-left">
+            <h1 className="font-medium text-[20px] sm:text-[32px]">
+              90 Days Return
+            </h1>
+            <p className="text-sm sm:text-base text-[#9F9F9F] mt-2">
+              If goods have problems, consectetur adipiscing elit.
+            </p>
+          </div>
 
+          <div className="w-full sm:w-[376px] text-center sm:text-left">
+            <h1 className="font-medium text-[20px] sm:text-[32px]">
+              Secure Payment
+            </h1>
+            <p className="text-sm sm:text-base text-[#9F9F9F] mt-2">
+              100% secure payment, consectetur adipiscing elit.
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );
